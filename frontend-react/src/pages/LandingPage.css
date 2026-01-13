@@ -1,0 +1,235 @@
+.landing-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  padding: 100px 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  padding-right: 2rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-title .highlight {
+  color: #4cd964;
+  display: block;
+  font-size: 2.8rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+.hero-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: translateY(-10px);
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Features Section */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #3498db;
+  border-radius: 2px;
+}
+
+.feature-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid #3498db;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #3498db;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card .card-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.feature-card .card-text {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card .list-group-item {
+  border: none;
+  padding: 0.5rem 0;
+  color: #555;
+}
+
+/* Benefits Section */
+.benefit-item {
+  padding: 2rem 1rem;
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  color: #3498db;
+  margin-bottom: 1.5rem;
+}
+
+.benefit-item h5 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.benefit-item p {
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Users Section */
+.user-role-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.user-role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.role-badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.user-role-card .card-title {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.user-role-card .card-text {
+  color: #666;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.cta-section .lead {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.cta-section .btn-light {
+  background: white;
+  color: #3498db;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.cta-section .btn-light:hover {
+  background: #f8f9fa;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer-section {
+  background: #1a252f;
+}
+
+.footer-section h5 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-title .highlight {
+    font-size: 2rem;
+  }
+  
+  .hero-section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,42 @@
+.confirm-modal .modal-content {
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+  background-color: white;
+}
+
+.confirm-modal .modal-header {
+  border-bottom: 2px solid #f0f0f0;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff9f1c 100%);
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.confirm-modal .modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.confirm-modal .modal-body {
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #333;
+  background-color: white;
+}
+
+.confirm-modal .modal-footer {
+  border-top: 2px solid #f0f0f0;
+  padding: 1rem 1.5rem;
+  background-color: white;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

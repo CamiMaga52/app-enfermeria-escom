@@ -1,0 +1,410 @@
+/* Materiales.css - Estilos para el módulo de materiales */
+
+/* Contenedor principal */
+.materiales-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 80px);
+}
+
+/* Header con estadísticas */
+.materiales-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.materiales-header h2 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Reutilizamos los estilos de medicamentos, solo cambiamos algunos colores */
+.estadisticas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.estadistica-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.estadistica-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.estadistica-icon {
+  font-size: 2rem;
+  margin-right: 16px;
+  color: #17a2b8; /* Color diferente para materiales */
+}
+
+.estadistica-content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.estadistica-content p {
+  color: #7f8c8d;
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+}
+
+/* Filtros y búsqueda */
+.filtros-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.search-box input {
+  padding-left: 40px;
+  border-radius: 25px;
+  border: 1px solid #dee2e6;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+.filter-box {
+  min-width: 200px;
+}
+
+.filter-box select {
+  border-radius: 25px;
+  padding: 8px 16px;
+}
+
+/* Tabla de materiales */
+.table-responsive {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead {
+  background-color: #17a2b8; /* Color diferente para materiales */
+  color: white;
+}
+
+.table thead th {
+  border: none;
+  padding: 16px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(23, 162, 184, 0.1); /* Color hover diferente */
+}
+
+.table tbody td {
+  padding: 16px;
+  vertical-align: middle;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Indicadores de stock (reutilizados de medicamentos) */
+.stock-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stock-indicator {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  min-width: 50px;
+  text-align: center;
+}
+
+.stock-normal {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.stock-bajo {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.stock-agotado {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Badges para estado */
+.badge {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.badge.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+/* Botones de acción */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-buttons .btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+/* Categoría badge */
+.categoria-badge {
+  display: inline-block;
+  background-color: #e8f4fc;
+  color: #17a2b8; /* Color diferente */
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Estado vacío */
+.empty-state {
+  text-align: center;
+  padding: 40px;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  color: #dee2e6;
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Resumen de tabla */
+.table-summary {
+  background: white;
+  padding: 16px;
+  border-top: 1px solid #dee2e6;
+  border-radius: 0 0 10px 10px;
+}
+
+.table-summary p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Modales (reutilizados) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Detalles del material */
+.detail-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.detail-card {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+}
+
+.detail-card-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #17a2b8; /* Color diferente */
+  display: flex;
+  align-items: center;
+}
+
+.detail-list {
+  margin: 0;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #dee2e6;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.detail-item dt {
+  font-weight: 500;
+  color: #6c757d;
+  flex: 0 0 45%;
+}
+
+.detail-item dd {
+  margin: 0;
+  color: #2c3e50;
+  flex: 0 0 55%;
+  text-align: right;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  text-align: center;
+}
+
+.loading-container .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.loading-container p {
+  margin-top: 16px;
+  color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .materiales-container {
+    padding: 10px;
+  }
+  
+  .materiales-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .estadisticas-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .filtros-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-box, .filter-box {
+    width: 100%;
+  }
+  
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .detail-item dd {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .modal-content {
+    margin: 10px;
+    max-height: calc(100vh - 20px);
+  }
+}

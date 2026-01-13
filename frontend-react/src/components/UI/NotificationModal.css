@@ -1,0 +1,106 @@
+.notification-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.2s ease-in;
+}
+
+.notification-modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease-out;
+  overflow: hidden;
+}
+
+.notification-modal-header {
+  padding: 24px;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.notification-icon {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+}
+
+.notification-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.notification-modal-body {
+  padding: 24px;
+  text-align: center;
+}
+
+.notification-modal-body p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.notification-modal-footer {
+  padding: 16px 24px;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+}
+
+.notification-modal-footer .btn {
+  min-width: 120px;
+  padding: 10px 24px;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .notification-modal-content {
+    width: 95%;
+    margin: 16px;
+  }
+
+  .notification-icon {
+    font-size: 2.5rem;
+  }
+
+  .notification-title {
+    font-size: 1.25rem;
+  }
+
+  .notification-modal-body p {
+    font-size: 1rem;
+  }
+}

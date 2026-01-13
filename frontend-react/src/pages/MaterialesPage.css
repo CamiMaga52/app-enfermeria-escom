@@ -1,0 +1,140 @@
+.materiales-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+.materiales-header {
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.materiales-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.materiales-header .brand h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.materiales-header .header-icon {
+  font-size: 2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.materiales-header .brand p {
+  margin: 8px 0 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-details {
+  text-align: right;
+}
+
+.user-name {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.user-role {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 3px 12px;
+  border-radius: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.materiales-header .btn {
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-weight: 500;
+}
+
+.materiales-header .btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+.materiales-main {
+  flex: 1;
+  padding: 0;
+}
+
+.materiales-footer {
+  background: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.materiales-footer p {
+  margin: 0 0 5px;
+  font-weight: 500;
+}
+
+.materiales-footer small {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .materiales-header .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .user-info {
+    flex-wrap: wrap;
+  }
+
+  .materiales-header .brand h1 {
+    font-size: 1.5rem;
+  }
+}

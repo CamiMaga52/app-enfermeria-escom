@@ -1,0 +1,478 @@
+/* Recetas.css - Estilos para el módulo de recetas */
+
+/* Contenedor principal */
+.recetas-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 80px);
+}
+
+/* Header con estadísticas */
+.recetas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.recetas-header h2 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Estadísticas */
+.estadisticas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.estadistica-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.estadistica-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.estadistica-icon {
+  font-size: 2rem;
+  margin-right: 16px;
+  color: #20c997; /* Color verde para recetas */
+}
+
+.estadistica-content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.estadistica-content p {
+  color: #7f8c8d;
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+}
+
+/* Filtros y búsqueda */
+.filtros-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.search-box input {
+  padding-left: 40px;
+  border-radius: 25px;
+  border: 1px solid #dee2e6;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+.filter-box {
+  min-width: 200px;
+}
+
+.filter-box select {
+  border-radius: 25px;
+  padding: 8px 16px;
+}
+
+/* Tabla de recetas */
+.table-responsive {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead {
+  background-color: #20c997; /* Color verde para recetas */
+  color: white;
+}
+
+.table thead th {
+  border: none;
+  padding: 16px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(32, 201, 151, 0.1); /* Color hover verde */
+}
+
+.table tbody td {
+  padding: 16px;
+  vertical-align: middle;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Estilos específicos para recetas */
+.folio-text {
+  color: #20c997;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+.paciente-info {
+  display: inline-block;
+  background-color: #e8f4fc;
+  color: #20c997;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.diagnostico-info {
+  max-width: 300px;
+}
+
+/* Botones de acción */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-buttons .btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+/* Badges para estado */
+.badge {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.badge.bg-primary {
+  background-color: #007bff !important;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+/* Estado vacío */
+.empty-state {
+  text-align: center;
+  padding: 40px;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  color: #dee2e6;
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Resumen de tabla */
+.table-summary {
+  background: white;
+  padding: 16px;
+  border-top: 1px solid #dee2e6;
+  border-radius: 0 0 10px 10px;
+}
+
+.table-summary p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Modales */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content.modal-lg {
+  max-width: 1000px;
+}
+
+/* Detalles de receta */
+.receta-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.detail-card {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.detail-card-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #20c997;
+  display: flex;
+  align-items: center;
+}
+
+.detail-list {
+  margin: 0;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #dee2e6;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.detail-item dt {
+  font-weight: 500;
+  color: #6c757d;
+  flex: 0 0 45%;
+}
+
+.detail-item dd {
+  margin: 0;
+  color: #2c3e50;
+  flex: 0 0 55%;
+  text-align: right;
+}
+
+/* Formulario de recetas */
+.detalles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.detalles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detalle-card {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s ease;
+}
+
+.detalle-card:hover {
+  border-color: #20c997;
+  background: #f0fdf9;
+}
+
+.detalle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cantidad-badge {
+  display: inline-block;
+  background-color: #20c997;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.id-receta {
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  color: #20c997;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  text-align: center;
+}
+
+.loading-container .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.loading-container p {
+  margin-top: 16px;
+  color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recetas-container {
+    padding: 10px;
+  }
+  
+  .recetas-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .estadisticas-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .filtros-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-box, .filter-box {
+    width: 100%;
+  }
+  
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+  
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .detail-item dd {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .modal-content {
+    margin: 10px;
+    max-height: calc(100vh - 20px);
+  }
+  
+  .detalle-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .detalle-header .btn {
+    align-self: flex-end;
+  }
+}
+
+/* Estilos para impresión */
+@media print {
+  .modal-overlay {
+    position: static;
+    background: none;
+    padding: 0;
+  }
+  
+  .modal-content {
+    max-width: none;
+    max-height: none;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .modal-header,
+  .modal-footer,
+  .btn {
+    display: none !important;
+  }
+  
+  .detail-card {
+    break-inside: avoid;
+  }
+}

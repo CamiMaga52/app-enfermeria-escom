@@ -1,0 +1,111 @@
+/* PacientesPage.css */
+.pacientes-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+.pacientes-header {
+  background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);
+  color: white;
+  padding: 16px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pacientes-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pacientes-header .brand h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pacientes-header .brand p {
+  margin: 4px 0 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-details {
+  text-align: right;
+}
+
+.user-name {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.user-role {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-top: 4px;
+}
+
+.pacientes-main {
+  flex: 1;
+  padding: 0;
+}
+
+.pacientes-footer {
+  background: #2c3e50;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.pacientes-footer p {
+  margin: 0 0 5px;
+}
+
+.pacientes-footer small {
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pacientes-header .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .user-info {
+    flex-wrap: wrap;
+  }
+  
+  .pacientes-header .brand h1 {
+    font-size: 1.5rem;
+  }
+}
